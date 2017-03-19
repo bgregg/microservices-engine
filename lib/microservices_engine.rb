@@ -59,7 +59,6 @@ module MicroservicesEngine
 
     # Redirects an engine `get` call to the appropriate resource
     def get(resource, path, params = {})
-      binding.pry
       if config['security_token'].blank?
         raise 'Security token is not set'
       end
